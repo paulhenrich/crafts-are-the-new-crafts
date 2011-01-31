@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Crafts are the new crafts</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      body {
+        background: #F5F5F5;
+        padding:40px;
+      }
+      h1 { 
+        font-family:"NeoRetroDraw", Helvetica, Arial, sans-serif;
+        font-size:140px;
+        line-height:1.3em;
+        color:#DD7E3E;
+        text-shadow:black 2px 1px 1px;
+        display:inline;
+        border-bottom: 5px dashed #66B1C0;
+      }
+      a{ text-decoration:none; }
+    </style>
+
+    <script>
+      var first =
+        ['arugula',
+        'ibexes',
+        'menorahs',
+        'traffic cones',
+        'absinthe spoons',
+        'cardboard boxes',
+        'geoducks',
+        'nickelodeons',
+        'unibrows',
+        'rollerblades',
+        'poison darts',
+        'tapirs',
+        'corneas',
+        'mothballs',
+        'cummerbunds',
+        'chicken feet',
+        'crawdads',
+        'oubliettes',
+        'freshwater lakes',
+        'pie servers',
+        'brogues',
+        'cigar cutters',
+        'ballots'
+        ];
+
+      var second =
+        ['narwhals',
+        'owls',
+        'sparrows',
+        'sushi rolls',
+        'vintage glasses',
+        'brass knuckles',
+        'steampunks',
+        'squids',
+        'mustaches',
+        'beards',
+        'bicycles',
+        'silhouettes',
+        'typewriter keys',
+        'tree branches',
+        'chandeliers ',
+        'macrons',
+        'cupcakes',
+        'kittens',
+        'wreaths',
+        'pennants',
+        'eggs',
+        'camper vans',
+        'anatomically correct hearts'
+        ];
+
+      var sizes = [140, 140, 142, 145, 143]; 
+      var colors= ["#383838", "#66B1C0", "#FF368D", "#B9D15A"];
+
+      function replace(){
+        var sentence = first[Math.floor(first.length * Math.random())] + " are the new " + second[Math.floor(second.length * Math.random())];
+        document.getElementById("crafts").innerHTML = sentence;
+        if (Math.floor(Math.random() * 100) % 2 == 0){
+          document.getElementById("crafts").style.color = colors[Math.floor(colors.length * Math.random())];
+          document.body.style.background = "#F5F5F5";
+          document.getElementById("crafts").style.fontSize = sizes[Math.floor(sizes.length * Math.random())] + "px";
+        }
+      }
+    </script>
+  </head>
+  <body onload="replace();">
+    <a href="http://localhost/crafty"><h1 id="crafts"></h1>	
+  </body>
+</html>
+
