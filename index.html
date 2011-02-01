@@ -10,7 +10,7 @@
       }
       h1 { 
         font-family:"NeoRetroDraw", Helvetica, Arial, sans-serif;
-        font-size:140px;
+        font-size:120px;
         line-height:1.3em;
         color:#DD7E3E;
         text-shadow:black 2px 1px 1px;
@@ -77,7 +77,7 @@
 					'anatomically correct hearts'
 					];
 
-				sizes = [122, 123, 121]; 
+				sizes = [122]; 
 				colors= ["#383838", "#66B1C0", "#FF368D", "#B9D15A"];
         
 				function _rand_index(target_array_ref){
@@ -85,25 +85,24 @@
 				}	
 
 				function narwahls_are_so_passe(){
-					var sentence = first[_rand_index(first)] + " are the new " + second[_rand_index(second)];
-					document.getElementById("crafts").innerHTML = sentence;
-					if (Math.floor(Math.random() * 3) % 2 == 0){
-						document.getElementById("crafts").style.color = colors[Math.floor(colors.length * Math.random())];
-						document.body.style.background = "#F5F5F5";
-						document.getElementById("crafts").style.fontSize = sizes[Math.floor(sizes.length * Math.random())] + "px";
-					}
+          var crafts_div, sentence;
+					sentence   = first[_rand_index(first)] + " are the new " + second[_rand_index(second)];
+          crafts_div = document.getElementById("crafts");
+
+          crafts_div.style.fontSize = sizes[_rand_index(sizes)] + "px";
+          crafts_div.style.color    = colors[_rand_index(colors)];
+          crafts_div.innerHTML      = sentence;
         }
         
-        return {
-          narwahls_are_so_passe: narwahls_are_so_passe
-        };
+        return narwahls_are_so_passe;
       })();
       
-      window.onload = crafts.narwahls_are_so_passe;
-
+      window.onload = crafts;
+      
 		</script>
   </head>
   <body>
     <a href="http://localhost/crafty"><h1 id="crafts"></h1></a>
+    <noscript>No javascript is the new javascript.</noscript>
   </body>
 </html>
