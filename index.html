@@ -21,12 +21,9 @@
     </style>
 
     <script>
-			var craftycrafty = (function(){
+			var crafts = (function(){
 
-				var first  = [],
-				second = [],
-				sizes  = [],
-				colors = [];
+				var first  = [], second = [], sizes  = [], colors = []; 
 
 				first =
 					['arugula',
@@ -55,7 +52,7 @@
 					];
 
 				second =
-					['narwhals',
+			    ['narwhals',
 					'owls',
 					'sparrows',
 					'sushi rolls',
@@ -82,24 +79,29 @@
 
 				sizes = [140, 140, 142, 145, 143]; 
 				colors= ["#383838", "#66B1C0", "#FF368D", "#B9D15A"];
+        
 				function _rand_index(target_array_ref){
 					return Math.floor(target_array_ref.length * Math.random());
 				}	
 
-				function replace(){
-					var sentence = first[Math.floor(first.length * Math.random())] + " are the new " + second[Math.floor(second.length * Math.random())];
+				function narwahls_are_so_passe(){
+					var sentence = first[_rand_index(first)] + " are the new " + second[_rand_index(second)];
 					document.getElementById("crafts").innerHTML = sentence;
-					if (Math.floor(Math.random() * 100) % 2 == 0){
+					if (Math.floor(Math.random() * 3) % 2 == 0){
 						document.getElementById("crafts").style.color = colors[Math.floor(colors.length * Math.random())];
 						document.body.style.background = "#F5F5F5";
 						document.getElementById("crafts").style.fontSize = sizes[Math.floor(sizes.length * Math.random())] + "px";
 					}
-				}
-
-			};)();
+        }
+        
+        return {
+          narwahls_are_so_passe: narwahls_are_so_passe
+        };
+      })();
+      
 		</script>
   </head>
-  <body onload="replace();">
-    <a href="http://localhost/crafty"><h1 href="id="crafts"></h1></a>
+  <body onload="crafts.narwahls_are_so_passe();">
+    <a href="http://localhost/crafty"><h1 id="crafts"></h1></a>
   </body>
 </html>
