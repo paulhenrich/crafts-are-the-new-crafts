@@ -68,7 +68,9 @@ var crafts = (function(){
         crafts_div.style.color    = colors[_rand_index(colors)];
         crafts_div.innerHTML      = sentence;
     }
-
+    
+    document.getElementById("reload").addEventListener("click", crafts, false);
+    
     return narwahls_are_so_passe;
 })();
 
