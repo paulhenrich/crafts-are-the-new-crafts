@@ -25,7 +25,7 @@ var crafts = (function(){
         'pie servers',
         'brogues',
         'cigar cutters',
-        'ballots',
+        'ballots'
         ];
 
     second =
@@ -51,7 +51,7 @@ var crafts = (function(){
         'pennants',
         'eggs',
         'camper vans',
-        'anatomically correct hearts',
+        'anatomically correct hearts'
         ];
 
     colors = ["#383838", "#66B1C0", "#FF368D", "#B9D15A"];
