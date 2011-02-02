@@ -1,6 +1,6 @@
 var crafts = (function(){
 
-    var first  = [], second = [], sizes  = [], colors = [];
+    var first  = [], second = [], colors = [];
 
     first =
        ['arugula',
@@ -54,8 +54,7 @@ var crafts = (function(){
         'anatomically correct hearts',
         ];
 
-    //sizes = [122];
-    colors= ["#383838", "#66B1C0", "#FF368D", "#B9D15A"];
+    colors = ["#383838", "#66B1C0", "#FF368D", "#B9D15A"];
 
     function _rand_index(target_array_ref){
         return Math.floor(target_array_ref.length * Math.random());
@@ -66,7 +65,6 @@ var crafts = (function(){
         sentence   = first[_rand_index(first)] + " are the new " + second[_rand_index(second)];
         crafts_div = document.getElementById("crafts");
 
-        //crafts_div.style.fontSize = sizes[_rand_index(sizes)] + "px";
         crafts_div.style.color    = colors[_rand_index(colors)];
         crafts_div.innerHTML      = sentence;
     }
