@@ -73,7 +73,7 @@ var crafts = (function(){
     }
     
     return narwahls_are_so_passe;
-})();
+}());
 
 window.onload = function(){
     crafts();
