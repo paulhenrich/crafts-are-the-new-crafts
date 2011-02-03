@@ -72,4 +72,7 @@ var crafts = (function(){
     return narwahls_are_so_passe;
 })();
 
-window.onload = crafts;
+window.onload = function(){
+    crafts();
+    document.getElementById("reload").addEventListener('click',crafts,false);
+};
