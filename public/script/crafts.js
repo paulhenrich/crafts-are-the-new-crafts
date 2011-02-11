@@ -59,23 +59,23 @@ var crafts = (function(){
 
     colors = ["#383838", "#66B1C0", "#FF368D", "#B9D15A"];
 
-    function _rand_index(target_array_ref){
-        return Math.floor(target_array_ref.length * Math.random());
+    function random_element(from_array){
+        return from_array[Math.floor(from_array.length * Math.random())];
     }
-
+    
     function narwahls_are_so_passe(){
         var crafts_div, sentence;
-        sentence   = first[_rand_index(first)] + " are the new " + second[_rand_index(second)];
         crafts_div = document.getElementById("crafts");
+        sentence   = random_element(first) + " are the new " + random_element(second);
 
-        crafts_div.style.color    = colors[_rand_index(colors)];
+        crafts_div.style.color    = random_element(colors);
         crafts_div.innerHTML      = sentence;
     }
     
-    return narwahls_are_so_passe;
+    return { refresh: narwahls_are_so_passe };
 }());
 
 window.onload = function(){
-    crafts();
-    document.getElementById("reload").addEventListener('click',crafts,false);
+    crafts.refresh();
+    document.getElementById("reload").addEventListener('click', crafts.refresh, false);
 };
