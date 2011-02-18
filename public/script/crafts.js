@@ -54,7 +54,10 @@ var crafts = (function(){
         'camper vans',
         'anatomically correct hearts',
         'scrabble tiles',
-        'bottle caps'
+        'bottle caps',
+        'foxes',
+        'zombies',
+        'deer'
         ];
 
     colors = ["#383838", "#66B1C0", "#FF368D", "#B9D15A"];
