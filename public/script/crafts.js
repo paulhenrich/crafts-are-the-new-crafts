@@ -3,38 +3,35 @@ var crafts = (function(){
     var first  = [], second = [], colors = [];
 
     first =
-       ['arugula',
-        'ibexes',
+      ['dragonfruit',
+        'hooves',
         'menorahs',
         'traffic cones',
-        'absinthe spoons',
-        'cardboard boxes',
+        'starburns',
+        'apostrophes',
         'geoducks',
-        'nickelodeons',
+        'yachts',
         'unibrows',
         'rollerblades',
-        'poison darts',
-        'tapirs',
+        'aquifers',
+        'fleas',
         'corneas',
         'mothballs',
-        'cummerbunds',
-        'chicken feet',
+        'babushkas',
+        'wrenches',
         'crawdads',
         'oubliettes',
-        'freshwater lakes',
-        'pie servers',
-        'brogues',
-        'cigar cutters',
-        'ballots',
-        'oompa loompas'
-        ];
+        'planets',
+        'goblins',
+        'emus',
+        'brainstems',
+        'hexagons',
+        'saxophones'];
 
     second =
-       ['narwhals',
-        'owls',
+       ['owls',
         'sparrows',
-        'sushi rolls',
-        'vintage glasses',
+        'vintage cameras',
         'brass knuckles',
         'steampunks',
         'squids',
@@ -44,23 +41,22 @@ var crafts = (function(){
         'silhouettes',
         'typewriter keys',
         'tree branches',
-        'chandeliers ',
+        'chandeliers',
         'macrons',
         'cupcakes',
-        'kittens',
-        'wreaths',
+        'birds',
         'pennants',
         'eggs',
         'camper vans',
-        'anatomically correct hearts',
-        'scrabble tiles',
-        'bottle caps',
+        'state outlines',
         'foxes',
         'zombies',
-        'deer'
-        ];
+        'deer', 
+        'city maps',
+        'chevrons',
+        'triangles',
+        'keep calm and carry on'];
 
-    colors = ["#383838", "#66B1C0", "#FF368D", "#B9D15A"];
 
     function random_element(from_array){
         return from_array[Math.floor(from_array.length * Math.random())];
@@ -71,7 +67,6 @@ var crafts = (function(){
         crafts_div = document.getElementById("crafts");
         sentence   = random_element(first) + " are the new " + random_element(second);
 
-        crafts_div.style.color    = random_element(colors);
         crafts_div.innerHTML      = sentence;
     }
     
@@ -81,4 +76,5 @@ var crafts = (function(){
 window.onload = function(){
     crafts.refresh();
     document.getElementById("reload").addEventListener('click', crafts.refresh, false);
+    document.body.addEventListener('click', crafts.refresh, false);
 };
