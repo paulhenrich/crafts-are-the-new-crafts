@@ -1,6 +1,6 @@
 var crafts = (function(){
 
-    var first  = [], second = [], colors = [];
+    var first  = [], second = [];
 
     first =
       ['dragonfruit',
@@ -26,10 +26,13 @@ var crafts = (function(){
         'emus',
         'brainstems',
         'hexagons',
-        'saxophones'];
+        'saxophones',
+        'emoji'];
 
     second =
        ['owls',
+        'bacon',
+        'grumpycat',
         'sparrows',
         'vintage cameras',
         'brass knuckles',
