@@ -5,7 +5,7 @@ var crafts = (function(){
     first =
       ['dragonfruit',
         'hooves',
-        'menorahs',
+        'ikea wrenches',
         'traffic cones',
         'starburns',
         'apostrophes',
